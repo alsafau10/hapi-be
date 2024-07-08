@@ -88,7 +88,7 @@ const getAllBookInfoHandler = (request, header) => {
         return response;
     }
 
-    if (reading !== undefined){
+    if (finished !== undefined){
         const response = header.response({
             status:'success',
             data:{
