@@ -77,7 +77,7 @@ const getAllBookInfoHandler = (request, header) => {
         const response = header.response({
             status:'success',
             data:{
-                books: bookshelf.filter(book => book.reading === (reading === '1')).map((book) => ({
+                books: bookshelf.filter(book => book.reading == reading).map((book) => ({
                     id:book.id,
                     name: book.name,
                     publisher: book.publisher,
@@ -92,7 +92,7 @@ const getAllBookInfoHandler = (request, header) => {
         const response = header.response({
             status:'success',
             data:{
-                books: bookshelf.filter(book => book.finished === (finished === '1') ).map((book) => ({
+                books: bookshelf.filter(book => book.finished == finished ).map((book) => ({
                     id:book.id,
                     name: book.name,
                     publisher: book.publisher,
